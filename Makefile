@@ -19,10 +19,10 @@ go-get-dephs:
 
 
 generate-proto:
-	mkdir -p pb/cron_v1
-	protoc --proto_path proto/cron_v1 \
-	--go_out=pb/cron_v1 --go_opt=paths=source_relative \
+	mkdir -p pb/scheduler
+	protoc --proto_path proto/scheduler \
+	--go_out=pb/scheduler --go_opt=paths=source_relative \
 	--plugin=protoc-gen-go=bin/protoc-gen-go \
-	--go-grpc_out=pb/cron_v1 --go-grpc_opt=paths=source_relative \
+	--go-grpc_out=pb/scheduler --go-grpc_opt=paths=source_relative \
 	--plugin=protoc-gen-go-grpc=bin/protoc-gen-go-grpc \
-	proto/cron_v1/cron.proto
+	proto/scheduler/scheduler.proto
