@@ -5,8 +5,8 @@ import (
 
 	"github.com/Georgi-Progger/task-tracker-common/kafka/producer"
 	"github.com/Georgi-Progger/task-tracker-common/logger"
-	"github.com/Georgi-Progger/task-tracker-sheduler/internal/cron"
-	"github.com/Georgi-Progger/task-tracker-sheduler/pkg/pb/scheduler"
+	"github.com/Georgi-Progger/task-tracker-scheduler/internal/cron"
+	"github.com/Georgi-Progger/task-tracker-scheduler/pkg/pb/scheduler"
 	"github.com/google/uuid"
 )
 

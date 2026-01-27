@@ -1,4 +1,4 @@
-module github.com/Georgi-Progger/task-tracker-sheduler
+module github.com/Georgi-Progger/task-tracker-scheduler
 
 go 1.24.0
 

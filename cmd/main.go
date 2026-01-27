@@ -6,9 +6,9 @@ import (
 
 	"google.golang.org/grpc"
 
-	"github.com/Georgi-Progger/task-tracker-sheduler/internal/cron"
-	pb "github.com/Georgi-Progger/task-tracker-sheduler/internal/grpc"
-	"github.com/Georgi-Progger/task-tracker-sheduler/pkg/pb/scheduler"
+	"github.com/Georgi-Progger/task-tracker-scheduler/internal/cron"
+	pb "github.com/Georgi-Progger/task-tracker-scheduler/internal/grpc"
+	"github.com/Georgi-Progger/task-tracker-scheduler/pkg/pb/scheduler"
 )
 
 func main() {
