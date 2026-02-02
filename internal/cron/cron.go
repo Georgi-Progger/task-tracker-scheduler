@@ -1,19 +1,22 @@
 package cron
 
 import (
-	"log"
 	"sync"
 	"time"
+
+	"github.com/Georgi-Progger/task-tracker-common/logger"
 )
 
 type Cron struct {
-	mu   sync.Mutex
-	jobs map[string]*Job
+	mu     sync.Mutex
+	logger logger.Logger
+	jobs   map[string]*Job
 }
 
-func New() *Cron {
+func New(logger logger.Logger) *Cron {
 	return &Cron{
-		jobs: make(map[string]*Job),
+		logger: logger,
+		jobs:   make(map[string]*Job),
 	}
 }
 
@@ -45,7 +48,7 @@ func (c *Cron) tick() {
 			job.Minute == now.Minute() &&
 			!sameDay(job.LastRun, now) {
 
-			log.Println("cron: executing job", job.ID)
+			c.logger.Println("cron: executing job", job.ID)
 			job.LastRun = now
 			go job.Run()
 		}
