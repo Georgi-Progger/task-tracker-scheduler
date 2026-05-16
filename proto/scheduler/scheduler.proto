@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package scheduler;
+
+option go_package = "github.com/Georgi-Progger/proto/scheduler;scheduler";
+
+
+service SchedulerSService {
+    rpc CreateDailyEvent(CreateDailyEventRequest) returns (CreateDailyEventResponse);
+}
+
+message CreateDailyEventRequest {
+  int32 hour = 1;
+  int32 minute = 2;
+}
+
+message CreateDailyEventResponse {
+  string job_id = 1;
+}
